@@ -57,7 +57,7 @@ app.put('/pedals/:id', function(req, res) {
 });
 // Delete ONE record route
 app.delete('/pedals/:id', function(req, res) {
-    db.pedal.({
+    db.pedal.delete({
         where: {id: parseInt(req.params.id)}
     }).then(function(data) {
         res.json(data);
